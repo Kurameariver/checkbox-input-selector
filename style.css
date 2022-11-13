@@ -1,0 +1,86 @@
+select {
+    appearance: none;
+    background: transparent;
+    background-image: url(./Untitled-1.png);
+    background-size: 50px;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 80px;
+}
+
+
+
+
+input[type=number] {
+    /*for absolutely positioning spinners*/
+    position: relative; 
+    padding: 5px;
+    padding-right: 25px;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    opacity: 0;
+  }
+
+  input[type=number]::-webkit-outer-spin-button, 
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    width: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  .checkbox-google {
+    display: inline-block;    
+    height: 28px;    
+    line-height: 28px;      
+    margin-right: 10px;       
+    position: relative;
+    vertical-align: middle;
+    font-size: 14px;
+    user-select: none; 
+   }
+   .checkbox-google .checkbox-google-switch {
+    display: inline-block; 
+    width: 36px;
+    height: 14px; 
+    border-radius: 20px;
+    position: relative;
+    top: 6px;   
+    vertical-align: top;
+    background: #9f9f9f;
+    transition: .2s;
+   }
+   .checkbox-google .checkbox-google-switch:before {
+    content: '';
+    display: inline-block; 
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    top: -3px;
+    left: -1px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+    transition: .15s;  
+   }
+   .checkbox-google input[type=checkbox] {
+    display: block; 
+    width: 0;
+    height: 0; 
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+   }
+   .checkbox-google input[type=checkbox]:checked + .checkbox-google-switch {
+    background: #9ABEF7;
+   }
+   .checkbox-google input[type=checkbox]:checked + .checkbox-google-switch:before {
+    background: #1a73e8;
+    transform:translateX(18px);
+   }
